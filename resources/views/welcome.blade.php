@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Laravel</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  @vite('resources/js/app.js')
-</head>
-
-<body>
-  <h1>ciao!</h1>
-</body>
-
-</html>
-
-{{-- 
-
 @extends('layouts.app')
 
-@section('page-title', $title )
+@section('page-title', 'laravel-model' )
 
 @section('main-content')
-<div class="container">
+<div class="container py-5">
+  <div class="row g-3">
+      @foreach ($movies as $movie)
+      <div class="col-3">
+          <div class="card h-100">
+            <div class="card-header">
+                {{$movie->title}}
+            </div>
+            <div class="card-body d-flex flex-column g-1">
+                <strong>Original Title:</strong>{{$movie->original_title}}
+                <strong>Country:</strong>{{$movie->nationality}}
+                <strong>Year:</strong>{{$movie->date}}
+                <strong>Vote:</strong>{{$movie->vote}}
+            </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
 </div>
 @endsection
-
---}}

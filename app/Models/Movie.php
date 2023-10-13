@@ -9,13 +9,4 @@ class Movie extends Model
 {
     use HasFactory;
 
-
-
-    public function getStars()
-    {
-
-        return $avg_vote = ($this->vote / 2);
-
-        dd($avg_vote);
-    }
 }

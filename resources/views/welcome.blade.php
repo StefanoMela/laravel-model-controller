@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'laravel-model' )
+@section('page-title', 'Index' )
 
 @section('main-content')
 <div class="container py-5">
@@ -16,6 +16,7 @@
                 <strong>Country:</strong>{{$movie->nationality}}
                 <strong>Year:</strong>{{$movie->date}}
                 <strong>Vote:</strong>{{$movie->vote}}
+                <a href="{{route('details', $movie->id)}}" class="btn btn-primary mt-1">Get details</a>
             </div>
         </div>
       </div>

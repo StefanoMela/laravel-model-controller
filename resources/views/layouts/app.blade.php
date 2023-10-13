@@ -9,7 +9,7 @@
   {{-- FONTS --}}
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <title>@yield('page-title')</title>
+  <title>{{ env("APP_NAME")}}  - @yield('page-title')</title>
 
   @vite('resources/js/app.js')
 </head>
